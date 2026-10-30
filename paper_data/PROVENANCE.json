@@ -1,0 +1,58 @@
+{
+  "files": {
+    "figure5_ood.csv": {
+      "sha256": "af6c2dfce74d121ca3133e7be3f4a2579a289ad4ae6f022897714d8122c12a1a",
+      "original_sha256": "af6c2dfce74d121ca3133e7be3f4a2579a289ad4ae6f022897714d8122c12a1a",
+      "rows": 39,
+      "transformation": "none"
+    },
+    "figure6_shared1024.csv": {
+      "sha256": "cf6f4c00e1f55505e745d8bfca466dcb5f12321037eb6e27f8e8a99e84c75013",
+      "original_sha256": "cf6f4c00e1f55505e745d8bfca466dcb5f12321037eb6e27f8e8a99e84c75013",
+      "rows": 20,
+      "transformation": "none"
+    },
+    "figure7_cpu.csv": {
+      "sha256": "94b0ee5573924f634c333aa1a2aacd94e9cea1f8b52484d719ed4bdf5534ac7f",
+      "original_sha256": "94b0ee5573924f634c333aa1a2aacd94e9cea1f8b52484d719ed4bdf5534ac7f",
+      "rows": 42,
+      "transformation": "none"
+    },
+    "figure8_overlap.csv": {
+      "sha256": "c2c371e3115626db41695df7faa946833fd79ca2067857c4b557d2b98edc6bf1",
+      "original_sha256": "c2c371e3115626db41695df7faa946833fd79ca2067857c4b557d2b98edc6bf1",
+      "rows": 12,
+      "transformation": "none"
+    },
+    "baseline_training.csv": {
+      "sha256": "6f1c282014872131e17525bd3c81c0a905f2e12ee802c3461a9ed170a516cd11",
+      "original_sha256": "d44144859c39745b580e9ff80d1edc22e54e8588834831bf488065e5f1a6e8ff",
+      "rows": 151,
+      "transformation": "Replace source file location with source content SHA256; epoch and loss values unchanged"
+    }
+  },
+  "independent_runs_per_serving_point": 1,
+  "independent_runs_per_cpu_cell": 1,
+  "figure6": {
+    "points": 20,
+    "requests_per_point": 1024,
+    "tokens_per_point": 544047,
+    "seed": 0,
+    "protocol": "shared resident512/decode64; author-native B32 data not merged"
+  },
+  "figure7": {
+    "points": 42,
+    "batch": 8,
+    "seconds": 10,
+    "queue_batches": 8,
+    "drain_seconds": 60,
+    "producer_policy": "uniform_continuous_poll",
+    "expiration": false,
+    "original_generator_criteria_retained": true
+  },
+  "figure8": {
+    "async_trials": 144,
+    "post_prefill_control_trials": 72
+  },
+  "raw_prompt_or_tokens_or_weights_included": false
+}

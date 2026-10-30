@@ -1,0 +1,42 @@
+{
+  "methods": [
+    "LEAP",
+    "TRAIL",
+    "TIE",
+    "LTR",
+    "SSJF",
+    "EGTP-P",
+    "EGTP-L"
+  ],
+  "rates_predictions_s": [
+    1,
+    10,
+    100,
+    1000,
+    10000,
+    100000
+  ],
+  "batch": 8,
+  "supply_seconds": 10,
+  "lead_in_seconds": 1,
+  "queue_batches": 8,
+  "drain_seconds": 60,
+  "expiration": false,
+  "producer_wait_policy": "uniform_continuous_poll",
+  "producer_sleep_enabled": false,
+  "CPU_roles": {
+    "predictor": 12,
+    "producer": 13,
+    "consumer": 14,
+    "sampler": 15
+  },
+  "source_representation_GPU": 1,
+  "serving_model_executed": false,
+  "mc_draws_for_TIE": 10000,
+  "CVaR_in_component_cost": false,
+  "generator_limits": {
+    "max_skipped_fraction": 0.01,
+    "p95_attempt_lag": "at most one batch interval"
+  },
+  "single_run": true
+}

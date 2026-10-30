@@ -1,0 +1,25 @@
+{
+  "mapping": "sqrt",
+  "one_based_layer": 30,
+  "feature_dim": 4096,
+  "output_budget": 2048,
+  "source_standardization": {
+    "mean": "source train only",
+    "std_ddof": 1,
+    "std_epsilon": 1e-06
+  },
+  "alpha_grid": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1,
+    10
+  ],
+  "feature_penalty": "alpha * feature_dim",
+  "intercept_penalized": false,
+  "export_dtype": "float32",
+  "accumulation_dtype": "float64",
+  "selection_split": "validation",
+  "test_used_for_selection": false
+}

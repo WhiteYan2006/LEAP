@@ -1,0 +1,37 @@
+{
+  "methods": [
+    "FCFS",
+    "LEAP",
+    "TIE",
+    "LTR"
+  ],
+  "rates_requests_s": [
+    20,
+    40,
+    60,
+    80,
+    100
+  ],
+  "requests_per_point": 1024,
+  "output_tokens_per_point": 544047,
+  "seed": 0,
+  "resident_limit": 512,
+  "decode_budget": 64,
+  "kv_blocks": 20592,
+  "kv_block_tokens": 16,
+  "batch_tokens": 4096,
+  "gpu_memory_utilization": 0.8,
+  "aging": {
+    "factor": 0.9,
+    "seconds": 30
+  },
+  "physical_text_forward_batch": 8,
+  "predictor_device": {
+    "LEAP": "CPU",
+    "TIE": "main GPU",
+    "LTR": "main GPU",
+    "FCFS": "none"
+  },
+  "native_TIE_B32_risk_protocol": false,
+  "single_run": true
+}

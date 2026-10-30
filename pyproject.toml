@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "leap-readout"
+version = "0.1.0.dev0"
+description = "Linear output-length readout and completion-supervised RLS for LLM scheduling"
+requires-python = ">=3.10"
+readme = "README.md"
+dependencies = ["numpy>=1.24,<3"]
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.7,<4"]
+features = ["torch>=2.6", "transformers>=4.51,<6", "safetensors>=0.4"]
+
+[project.scripts]
+leap = "leap.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
